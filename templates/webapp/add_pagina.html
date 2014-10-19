@@ -1,0 +1,50 @@
+{% extends 'webapp/base.html' %}
+{% load static %}
+
+	{% block title %}Adicionar Pagina{% endblock %}
+
+    {% block head %}
+        <style>
+
+            body {
+                background-color: #eeeeee;
+            }
+
+            .herounit {
+              
+            }
+
+        </style>
+    {% endblock %}
+
+	{% block body_block %}
+		<div class="item">
+        <img src="{% static 'img/home_bandeira2.jpg' %}" alt="">
+
+    </div>
+    
+    <div class="hero-unit">
+        <h2>Adicionar Pagina - {{ candidato_nome }}</h2>
+        <br/>
+        <div class="container">
+            <form class="span6" id="category_form" method="post" action="/home/candidato/{{ candidato_nome_url }}/adicionar_pagina/">
+                {% csrf_token %}
+                {% for hidden in form.hidden_fields %}
+                {{ hidden }}
+                {% endfor %}
+
+                {% for field in form.visible_fields %}
+                {{ field.errors }}
+                {{ field.help_text }}<br/>
+                {{ field }}
+                {% endfor %}
+
+                <br/>
+                <button class="btn btn-primary" type="submit" name="submit">Adicionar Pagina</button>
+            </form>
+        </div>
+    </div>
+
+
+
+	{% endblock %}

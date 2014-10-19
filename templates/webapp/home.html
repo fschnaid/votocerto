@@ -1,0 +1,87 @@
+{% extends 'webapp/base.html' %}
+{% load static %}
+
+  {% block head %}
+    <link href="{% static 'css/bootstrap-carousel.css' %}" rel="stylesheet">
+  {% endblock %}
+
+
+  {% block body_block %}
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{% static 'img/home_bandeira.jpg' %}" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 class="title_page">VotoCerto</h>
+              <p class="lead">O Portal dos Candidatos</p>
+              <a class="btn btn-large btn-primary" href="#">Sobre Nós</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{% static 'img/home_aecio.jpg' %}" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Aécio Neves</h1>
+              <p class="lead">O candidato pelo Partido da Social Democracia Brasileira (PSDB) é Aécio Neves. Oriundo de uma família tradicional de políticos mineiros, é neto do ex-presidente Trancredo Neves, um dos mais importantes políticos da história do Brasil. Atualmente, ele é senador pelo estado de Minas Gerais.</p>
+              <a class="btn btn-large btn-primary" href="candidato/Aécio_Neves/">Veja os Artigos</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{% static 'img/home_dilma.jpg' %}" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Dilma Rousseff</h1>
+              <p class="lead">A atual presidente, Dilma Rousseff é economista de formação e está na política desde a década de 1980. Ela é companheira de partido, sucessora e amiga de Lula, um dos mais populares presidente da história do Brasil. Filiada ao Partido dos Trabalhadores (PT) há quase 15 anos, ela adquiriu grande rejeição durante seu governo. </p>
+              <a class="btn btn-large btn-primary" href="candidato/Dilma_Rousseff/">Veja os Artigos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 Fernando Schnaidman &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+        <script src="{% static 'js/jquery.js' %}"></script>
+        <script src="{% static 'js/bootstrap-transition.js' %}"></script>
+        <script src="{% static 'js/bootstrap-alert.js' %}"></script>
+        <script src="{% static 'js/bootstrap-modal.js' %}"></script>
+        <script src="{% static 'js/bootstrap-dropdown.js' %}"></script>
+        <script src="{% static 'js/bootstrap-scrollspy.js' %}"></script>
+        <script src="{% static 'js/bootstrap-tab.js' %}"></script>
+        <script src="{% static 'js/bootstrap-tooltip.js' %}"></script>
+        <script src="{% static 'js/bootstrap-popover.js' %}"></script>
+        <script src="{% static 'js/bootstrap-button.js' %}"></script>
+        <script src="{% static 'js/bootstrap-collapse.js' %}"></script>
+        <script src="{% static 'js/bootstrap-carousel.js' %}"></script>
+        <script src="{% static 'js/bootstrap-typeahead.js' %}"></script>
+        <script>
+            !function ($) {
+                $(function(){
+                 // carousel demo
+                $('#myCarousel').carousel()
+            })
+            }(window.jQuery)
+        </script>
+        <script src="{% static 'js/holder.js' %}"></script>
+
+  {% endblock %}
+
